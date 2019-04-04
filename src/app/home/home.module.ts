@@ -6,11 +6,14 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
         path: '',
