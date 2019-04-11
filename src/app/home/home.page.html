@@ -42,17 +42,24 @@
   </ion-card>
 
   <ion-card>
-    <ion-label>Number :</ion-label>
-    <br>
+    <div style="border: 1px solid black">
+    <ion-label>Number </ion-label>
     <ion-input type="number" [(ngModel)]="num_1" required></ion-input>
+    </div>
+    <div style="border: 1px solid black">
+    <ion-label>Number </ion-label>
+    <ion-input type="number" [(ngModel)]="num_2" required></ion-input>
+  </div> 
+
     <ion-button size="small" (click)="plusOperation()">+</ion-button>
     <ion-button size="small" (click)="minusOperation()">-</ion-button>
     <ion-button size="small" (click)="multipleOperation()">x</ion-button>
     <ion-button size="small" (click)="divideOperation()">/</ion-button>
     <br>
-    <ion-label>Number :</ion-label>
-    <ion-input type="number" [(ngModel)]="num_2" required></ion-input>
+
+    <div style="border: 1px solid black">
     <ion-label>Result :</ion-label>
     <ion-input type="number" [(ngModel)]="result_operated" readonly></ion-input>
+    </div>
   </ion-card>
 </ion-content>
