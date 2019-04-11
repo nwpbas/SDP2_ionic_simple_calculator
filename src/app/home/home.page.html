@@ -11,9 +11,20 @@
     <form [formGroup]="myForm" (ngSubmit)="genResult()">
       <ion-item>
         <ion-label>Number :</ion-label>
-        <ion-input type="number" formControlName="multi_num" required></ion-input>
+        <ion-input
+          type="number"
+          formControlName="multi_num"
+          required
+        ></ion-input>
       </ion-item>
-      <ion-button type="submit" size="small" expand="block" [disabled]="!myForm.valid"> Show multiplication </ion-button>
+      <ion-button
+        type="submit"
+        size="small"
+        expand="block"
+        [disabled]="!myForm.valid"
+      >
+        Show multiplication
+      </ion-button>
     </form>
   </ion-card>
 
@@ -28,5 +39,20 @@
         </ion-label>
       </ion-item>
     </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-label>Number :</ion-label>
+    <br>
+    <ion-input type="number" [(ngModel)]="num_1" required></ion-input>
+    <ion-button size="small" (click)="plusOperation()">+</ion-button>
+    <ion-button size="small" (click)="minusOperation()">-</ion-button>
+    <ion-button size="small" (click)="multipleOperation()">x</ion-button>
+    <ion-button size="small" (click)="divideOperation()">/</ion-button>
+    <br>
+    <ion-label>Number :</ion-label>
+    <ion-input type="number" [(ngModel)]="num_2" required></ion-input>
+    <ion-label>Result :</ion-label>
+    <ion-input type="number" [(ngModel)]="result_operated" readonly></ion-input>
   </ion-card>
 </ion-content>
